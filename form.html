@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .enter-userdetails{
+        width:500px;
+        margin: auto;
+        background-color: #eee;
+        text-align: center;
+        padding: 20px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".submit").click(function(){
+        var userName = $('.userName').val();
+        var email = $('.email').val();
+        var txt;
+        var confirmAhh = confirm("userName Is: " +   userName + '\n emailIs: ' + email);
+        if (confirmAhh == true) {
+            localStorage.setItem('userName',userName );
+            localStorage.setItem('email',email );
+        } else {
+            txt = "heyy fukker mahalingaaa You did not save details!";
+            document.getElementById("demo").innerHTML = txt
+            return false;
+        }
+        document.getElementById("demo").innerHTML = txt + ' '+ localStorage.getItem('userName');
+        });
+    });
+</script>
+</head>
+<body>
+<div class="enter-userdetails">
+    <p>Click the button to display a confirm box.</p>
+    <form action="savedData.html">
+        <input class="userName" type="text"/>
+        <input class="email" type="text"/>
+        <button type="submit" class="submit" onclick="myFunction()">Try it</button>
+    </form>
+    <h2 id="demo" style="color:red"></h2>
+</div>
+</body>
+</html>
