@@ -6,5 +6,5 @@ $hostname = "localhost";
 	$selected = mysql_select_db("uipractice",$dbhandle)
 	or die("Could not select examples");
 
-$base_url = 'uipractice';
+$base_url = 'http://localhost/uipractices';	
 ?>

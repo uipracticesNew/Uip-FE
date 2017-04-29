@@ -1,5 +1,7 @@
-<?php include('../connection.php'); ?>
-<?php include('userdata.php'); ?>
+<?php
+	include('../connection.php');
+	include('userdata.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,7 +61,7 @@
 									<li class="user-footer">
 										
 										<div class="pull-right">
-											<a href="admin_logout.php" class="btn btn-default btn-flat">Sign out</a>
+											<a href="<?php echo $base_url; ?>/admin/admin_logout.php" class="btn btn-default btn-flat">Sign out</a>
 										</div>
 									</li>
 								</ul>

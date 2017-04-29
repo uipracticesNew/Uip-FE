@@ -1,8 +1,9 @@
 <?php
+include('../connection.php');
 session_start();
 if(!($_SESSION['id']))
 {
-	header("Location:http://localhost/uipractice/login.php");
+	header("Location:".$base_url."/login.php");
 }
 ?>
 <?php include('include/header.php'); ?>

@@ -42,10 +42,11 @@
 <body>
 
 	<?php
+		include('connection.php');
 		session_start();
 		if(!empty($_SESSION['id']))
 		{
-			header("Location:admin/welcome.php");
+			header("Location:".$base_url."/admin/welcome.php");
 		}
 		
 	?>

@@ -1,10 +1,10 @@
 <?php 
+	include('../connection.php');
 	if(!($_SESSION['id']))
 	{
-		header("Location:http://localhost/uipractice/login.php");
+		header("Location:".$base_url."/login.php");
 	}
 
-	include('../connection.php');
 	$user_id = $_SESSION['id'];
 	$query = mysql_query("SELECT * FROM admin_registrations WHERE id='$user_id'");
 	$row = mysql_fetch_array($query);
